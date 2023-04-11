@@ -7,6 +7,11 @@ interface KaKaoMapScriptLoaderProps {
 function KakaoMapScriptLoader(props: KaKaoMapScriptLoaderProps) {
   const [mapScriptLoaded, setMapScriptLoaded] = useState(false);
   useEffect(() => {
+    const mapScript = document.getElementById(
+      import.meta.env.VITE_KAKAO_MAP_SCRIPT_ID
+    );
+    if (mapScript && !window.kakao) return;
+
     const script = document.createElement("script"); // <script></script>
     script.id = import.meta.env.VITE_KAKAO_MAP_SCRIPT_ID;
     script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${
