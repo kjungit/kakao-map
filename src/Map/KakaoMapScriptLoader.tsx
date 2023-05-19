@@ -1,8 +1,5 @@
 import React, { ReactNode, useEffect, useState } from "react";
-
-interface KaKaoMapScriptLoaderProps {
-  children: ReactNode;
-}
+import { KaKaoMapScriptLoaderProps } from "../types/Types";
 
 function KakaoMapScriptLoader(props: KaKaoMapScriptLoaderProps) {
   const [mapScriptLoaded, setMapScriptLoaded] = useState(false);
@@ -16,7 +13,7 @@ function KakaoMapScriptLoader(props: KaKaoMapScriptLoaderProps) {
     script.id = import.meta.env.VITE_KAKAO_MAP_SCRIPT_ID;
     script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${
       import.meta.env.VITE_KAKAO_MAP_APP_KEY
-    }&autoload=false`;
+    }&libraries=services&autoload=false`;
     script.onload = () => {
       window.kakao.maps.load(() => {
         // soccess
