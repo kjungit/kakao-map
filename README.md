@@ -3,16 +3,18 @@
 ---
 <img width="1440" alt="스크린샷 2023-05-21 오후 7 38 02" src="https://github.com/kjungit/kakao-map/assets/100064540/651fbad3-caef-4368-a5da-ffe6eeef9a02">
 
+ [배포링크](https://kakao-map-blond.vercel.app/)
 - ### 작업내용
 
   - kakao-map API를 사용하여 지역별, 상호명 검색기능 구현
   - 검색위치에 해당하는 마커 추가
   - 검색리스트에서 item 클릭시 해당 위치로 맵 이동
-
+  
 ---
 
 - 사용언어: React, TypeScript, 
 - 스타일: emotion
+- 배포: vercel
 
 ---
 
